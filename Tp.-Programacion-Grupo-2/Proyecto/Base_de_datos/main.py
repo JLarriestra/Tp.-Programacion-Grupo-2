@@ -20,6 +20,7 @@ def menu():
         print("4- salir")
         try:
             op = int(input("ingrese un valor: "))
+            
             if op == 1:
                 import modulo_funciones.equipo
             elif op == 2:
@@ -27,13 +28,11 @@ def menu():
             elif op == 3:
                 ejecutar()
             elif op == 4:
-                salir()
+                repetir = False
             else:
                 print("error")
-            input()    
         except:
             print("error")
-            input()
 
 
     
