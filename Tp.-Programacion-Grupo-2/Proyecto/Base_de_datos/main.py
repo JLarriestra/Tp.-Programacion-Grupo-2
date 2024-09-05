@@ -21,7 +21,7 @@ def menu():
         try:
             op = int(input("ingrese un valor: "))
             if op == 1:
-                equipo()
+                import modulo_funciones.equipo
             elif op == 2:
                import modulo_funciones.instruc
             elif op == 3:
