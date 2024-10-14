@@ -1,16 +1,18 @@
 import os
-
+import modulo_funciones.ejecutar as ejecutar_mod
+import modulo_funciones.equipo as equipo_mod
+import modulo_funciones.instruc as instruc_mod
 def main():
     pass
 def equipo():
-    pass
+    equipo_mod.equipo()
 def instrucciones():
-    pass
+    instruc_mod.instrucciones()
 def ejecutar():
-    pass
+    ejecutar_mod.ejecutar()
 def salir():
-    pass
-def menu():
+    print("Saliendo del programa...")
+def menu():    
     repetir = True
     while repetir:
         os.system("cls")
@@ -22,17 +24,21 @@ def menu():
             op = int(input("ingrese un valor: "))
             
             if op == 1:
-                import modulo_funciones.equipo
+                equipo()
             elif op == 2:
-               import modulo_funciones.instruc
+               instrucciones()
             elif op == 3:
                 ejecutar()
             elif op == 4:
-                repetir = False
+                salir()
+                repetir=False
+            
             else:
                 print("error")
+                input("presione enter para continuar")
         except:
             print("error")
+            input("presione enter para continuar")
 
 
     

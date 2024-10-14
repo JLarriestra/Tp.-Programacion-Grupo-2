@@ -1,4 +1,7 @@
+import os
+
 def instrucciones():
+    os.system("cls")
     print("Sistema de precios y descuentos en la Uade.")
     print("En este programa, se mostrara información detallada sobre los precios y descuentos de los productos y servicios disponibles en la UADE.")
     print("Como por ejemplo: Alimentos, bebidas, impresión, fotocopiado, costo de aparcamiento, entre otros.")
@@ -7,7 +10,6 @@ def instrucciones():
     inicio = int(input("Presione 0 para volver al inicio: "))
 
     if inicio == 0:
-        import Base_de_datos.main
+        import main
     
-    
-instrucciones()
+
