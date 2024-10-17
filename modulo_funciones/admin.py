@@ -37,6 +37,57 @@ def crear_productos():
 	
     escribir_archivo("productos.json", productos)
 
+def editar_producto():
+    print(f"--- Editar Producto ---")
+    encontrado = False
+    i = 0
+    id = int(input("ID del producto: "))
+    productos = leer_archivo("productos.json")
+    
+    while not encontrado and len(productos) > i:
+        producto = productos[i]
+        if(producto["id"] == id):
+            nombre = input(f"Nombre ({producto['nombre']}): ")
+            descripcion = input(f"Descripción ({producto['descripcion']}): ");
+            tipo = input(f"Tipo ({producto['tipo']}): ")
+            marca = input(f"Marca ({producto['marca']}): ")
+            precio = input(f"Precio ({producto['precio']}): ")
+    
+            if(nombre):
+                producto["nombre"]= nombre
+            if(descripcion):
+             producto["descripcion"]= descripcion
+            if(tipo):
+                producto["tipo"]= tipo
+            if(marca):
+                producto["marca"]= marca
+            if(precio):
+                producto["precio"]= precio
+
+            print("Editado con exito")
+            encontrado = True
+        i += 1
+
+    escribir_archivo("productos.json", productos)
+
+def borrar_producto():
+    encontrado = False
+    i = 0
+    id = int(input("ID del producto: "))
+    productos = leer_archivo("productos.json")
+
+    while not encontrado and len(productos) > i:
+        producto = productos[i]
+        
+        if(producto["id"] == id):
+            del productos[i]
+            print("Borrado con exito")
+            encontrado = True
+        i += 1
+    
+    escribir_archivo("productos.json", productos)
+
+
 def admin():
     repetir = True
     while repetir:
@@ -58,7 +109,11 @@ def admin():
             elif op == 2:
                 crear_productos()
             elif op == 3:
-               pass
+                editar_producto()
+            elif op == 4:
+                borrar_producto()
+            elif op == 6:
+                pass
 
             if op != 0:
                 input()

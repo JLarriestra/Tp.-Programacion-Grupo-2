@@ -70,14 +70,5 @@
         "marca": "Rustica",
         "precio": "3000",
         "valoracion": ""
-    },
-    {
-        "id": 9,
-        "nombre": "Cafe Americano",
-        "descripcion": "Un cafe fuerte",
-        "tipo": "Cafe",
-        "marca": "Starbucks",
-        "precio": "2000",
-        "valoracion": ""
     }
 ]
