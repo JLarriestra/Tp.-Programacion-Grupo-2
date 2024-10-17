@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "nombre": "Latte",
+        "descripcion": "Caf\u00e9 espresso con leche vaporizada.",
+        "tipo": "Cafe",
+        "marca": "Starbucks",
+        "precio": "1500",
+        "valoracion": "\u2606\u2606\u2606\u2606"
+    },
+    {
+        "id": 2,
+        "nombre": "Capuccino",
+        "descripcion": "Caf\u00e9 espresso con leche vaporizada.",
+        "tipo": "Cafe",
+        "marca": "Starbucks",
+        "precio": "1900",
+        "valoracion": "\u2606\u2606\u2606\u2606\u2606"
+    },
+    {
+        "id": 3,
+        "nombre": "Flat White",
+        "descripcion": "Shots de caf\u00e9 ristretto con leche vaporizada que finaliza con un punto dibujado en la superficie.",
+        "tipo": "Cafe",
+        "marca": "Starbucks",
+        "precio": "2000",
+        "valoracion": "\u2606\u2606\u2606"
+    },
+    {
+        "id": 4,
+        "nombre": "Latte Macchiato",
+        "descripcion": "Leche vaporizada con shots de caf\u00e9 espresso que finaliza con un punto dibujado en la superficie.",
+        "tipo": "Cafe",
+        "marca": "Starbucks",
+        "precio": "2000",
+        "valoracion": "\u2606\u2606\u2606\u2606"
+    },
+    {
+        "id": 5,
+        "nombre": "Latte Macchiato",
+        "descripcion": "Leche vaporizada con shots de caf\u00e9 espresso que finaliza con un punto dibujado en la superficie.",
+        "tipo": "Cafe",
+        "marca": "Starbucks",
+        "precio": "2000",
+        "valoracion": "\u2606\u2606\u2606\u2606"
+    },
+    {
+        "id": 6,
+        "nombre": "Alfajor XL",
+        "descripcion": "",
+        "tipo": "Dulces",
+        "marca": "Rustica",
+        "precio": "1000",
+        "valoracion": ""
+    },
+    {
+        "id": 7,
+        "nombre": "Cheesecake XL",
+        "descripcion": "",
+        "tipo": "Dulces",
+        "marca": "Rustica",
+        "precio": "2500",
+        "valoracion": ""
+    },
+    {
+        "id": 8,
+        "nombre": "Chocotorta",
+        "descripcion": "",
+        "tipo": "Dulces",
+        "marca": "Rustica",
+        "precio": "3000",
+        "valoracion": ""
+    },
+    {
+        "id": 9,
+        "nombre": "Cafe Americano",
+        "descripcion": "Un cafe fuerte",
+        "tipo": "Cafe",
+        "marca": "Starbucks",
+        "precio": "2000",
+        "valoracion": ""
+    }
+]
