@@ -1,7 +1,7 @@
-import os
+from modulo_funciones.utiles import limpiar_pantalla
 def equipo ():
     repetir= True
-    os.system("cls")
+    limpiar_pantalla()
     print("los integrantes del equipo son:")
     print("Juan Pedro Larriestra") 
     print("Ariel Blas Condorpocco")    

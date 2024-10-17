@@ -1,12 +1,8 @@
 from modulo_funciones.utiles import limpiar_pantalla
+from modulo_funciones.equipo import equipo
+from modulo_funciones.instruc import instrucciones
 from modulo_funciones.admin import admin
 from modulo_funciones.productos import manejar_menu_principal
-
-def equipo():
-    import modulo_funciones.equipo
-
-def instrucciones():
-    import modulo_funciones.instruc
 
 def ejecutar():
     repetir = True
