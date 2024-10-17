@@ -1,6 +1,8 @@
 A = True
 import json
 
+import modulo_funciones.GLOBAL as g
+
 def cargar_usuario(ruta_archivo):
     try:
         with open(ruta_archivo, 'r') as archivo:
@@ -29,15 +31,22 @@ def iniciar_sesion(ruta_archivo):
     nombre_usuario = input("Ingrese su nombre de usuario: ")
     contraseña = input("Ingrese su contraseña: ")
     if nombre_usuario in usuarios["usuarios"] and usuarios["usuarios"][nombre_usuario] == contraseña:
+        g.usuario["nombre"] = usuarios["usuarios"][nombre_usuario] 
         print("Bienvenido")
+        global A 
+        A = False
     else:
         print("Usuario o Contraseña Incorrectas.")
+
+def cerrar_sesion():
+    g.usuario = {}
     
-def login_():
+def login():
     global A
-    ruta_archivos = 'Proyecto/base_de_datos/usuarios.json'
+    A = True
+    ruta_archivos = 'base_de_datos/usuarios.json'
     while A:
-        print("1- Iiniciar sesion.")
+        print("1- Iniciar sesion.")
         print("2- Crear nuevo usuario")
         print("3- Sair")
         op = int(input("Ingrese uno de los numeros de las respectivas opciones: "))
@@ -50,5 +59,3 @@ def login_():
             A = False
         else:
             print("Esa opccion no existe, intente de nuevo.")
-
-login_()
