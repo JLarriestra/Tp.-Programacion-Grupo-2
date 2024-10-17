@@ -1,11 +1,28 @@
+from modulo_funciones.utiles import limpiar_pantalla, leer_archivo
+
 def mostrar_menu_principal():
     print("Bienvenido al menu principal:")
+    print("0. Salir")
     print("1. Alimentos")
     print("2. Productos")
-    print("3. Salir")
+
+def ver_productos(marca):
+    productos = leer_archivo("productos.json")
+
+    print(f"\n--- Menu de {marca} ---")
+
+    for producto in productos:
+        if(producto["marca"] == marca):
+            print(producto["nombre"], "-", "$",producto["precio"])
+            if(producto["descripcion"] != ""):
+                print(producto["descripcion"]) 
+            if(producto["valoracion"] != ""):
+                print("Valoración", producto["valoracion"])
+            print()
     
 def menu_starbucks():
     print("\n--- Menu de Starbucks ---")
+    print("0. Regresar al menu principal")
     print("1. Latte - $1500")
     print("   Café espresso con leche vaporizada.")
     print("   Valoración: ☆☆☆☆")
@@ -18,21 +35,22 @@ def menu_starbucks():
     print("4. Latte Macchiato - $2000")
     print("   Leche vaporizada con shots de café espresso que finaliza con un punto dibujado en la superficie.")
     print("   Valoración: ☆☆☆☆")
-    print("5. Regresar al menu principal")
+    
 
 def menu_rustica():
     print("\n--Menu de Rustica ---")
+    print("0. Regresar al menu principal")
     print("1. Alfajor XL - $1000")
     print("2. Cheesecake - $2500")
     print("3. Chocotorta - $3000")
-    print("4. Regresar al menu principal")
+    
 
 def menu_alimentos():
     print("\n--- Menu de Alimentos ---")
+    print("0. Regresar al menu principal")
     print("1. Starbucks")
     print("2. Rustica")
-    print("3. Regresar al menu principal")
-
+    
 def menu_ropa_y_accesorios():
     print("\n--- Ropa y Accesorios ---")
     print("1. Bufanda - $10000")
@@ -51,6 +69,28 @@ def menu_productos():
     print("2. Otros")
     print("3. Regresar al menu principal")
 
+def manejar_menu_principal():
+    repetir = True
+    while repetir:
+        menu_alimentos()
+        opcion_alimento = input("Elige una opción: ")
+        limpiar_pantalla()
+        # A completar, no olvidar o muerte!
+        repetirAlimento = True
+        if opcion_alimento == '0':
+            repetir = False
+        elif opcion_alimento == '1':
+            ver_productos("Starbucks")
+        elif opcion_alimento == '2':
+            ver_productos("Rustica")
+        else:
+            print("Opcion incorrecta, intente de nuevo.")
+            
+        if(opcion_alimento != '0'):
+            input()
+        limpiar_pantalla()
+
+'''
 def manejar_menu_principal():
     while True:
         mostrar_menu_principal()
@@ -152,10 +192,7 @@ def manejar_menu_principal():
             break
         else:
             print("Opcion incorrecta, intente de nuevo.")
-
-
-manejar_menu_principal()
-
+'''
 
 #Opiniones
 #Encuesta
