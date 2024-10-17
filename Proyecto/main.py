@@ -5,6 +5,7 @@ from modulo_funciones.admin import admin
 from modulo_funciones.productos import manejar_menu_principal
 
 def ejecutar():
+    from modulo_funciones.login import login_
     repetir = True
     while repetir:
         limpiar_pantalla()

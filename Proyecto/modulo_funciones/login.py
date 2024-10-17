@@ -33,9 +33,9 @@ def iniciar_sesion(ruta_archivo):
     else:
         print("Usuario o Contraseña Incorrectas.")
     
-def login():
+def login_():
     global A
-    ruta_archivos = 'usuarios.json'
+    ruta_archivos = 'Proyecto/base_de_datos/usuarios.json'
     while A:
         print("1- Iiniciar sesion.")
         print("2- Crear nuevo usuario")
@@ -51,4 +51,4 @@ def login():
         else:
             print("Esa opccion no existe, intente de nuevo.")
 
-login()
+login_()
