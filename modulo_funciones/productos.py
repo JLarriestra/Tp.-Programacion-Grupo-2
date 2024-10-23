@@ -21,7 +21,19 @@ def ver_productos(marca):
             print()
     
 def menu_starbucks():
-    print("\n--- Menu de Starbucks ---")
+    verde = '\033[32m'
+    reset = '\033[0m'
+    
+    print(f"{verde}"
+    """
+███████╗████████╗ █████╗ ██████╗ ██████╗ ██╗   ██╗ ██████╗██╗  ██╗███████╗
+██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗██║   ██║██╔════╝██║ ██╔╝██╔════╝
+███████╗   ██║   ███████║██████╔╝██████╔╝██║   ██║██║     █████╔╝ ███████╗
+╚════██║   ██║   ██╔══██║██╔══██╗██╔══██╗██║   ██║██║     ██╔═██╗ ╚════██║
+███████║   ██║   ██║  ██║██║  ██║██████╔╝╚██████╔╝╚██████╗██║  ██╗███████║
+╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝
+""")
+    print(f"{reset}")
     print("0. Regresar al menu principal")
     print("1. Latte - $1500")
     print("   Café espresso con leche vaporizada.")
@@ -35,23 +47,142 @@ def menu_starbucks():
     print("4. Latte Macchiato - $2000")
     print("   Leche vaporizada con shots de café espresso que finaliza con un punto dibujado en la superficie.")
     print("   Valoración: ☆☆☆☆")
+    opcion = input("Elige una opción: ")
     
+    if opcion == '0':
+        limpiar_pantalla()
+        manejar_menu_principal()
+    elif opcion in ['1', '2', '3', '4']:
+        producto = ["Latte", "Capuccino", "Flat White", "Latte Macchiato"][int(opcion) - 1]
+        limpiar_pantalla()
 
+        print(f"\nHas seleccionado {producto}.")
+
+        print("\n¿Cómo te gustaría que fuera tu pedido?")
+        print("1. Para llevar")
+        print("2. Para consumo local")
+        
+        consumo = input("Elige una opción: ")
+        
+        if consumo == '1':
+            print(f"Tu {producto} será para llevar.")
+        elif consumo == '2':
+            print(f"Tu {producto} será para consumo local.")
+        else:
+            print("Opción incorrecta, intente de nuevo.")
+        naranja = '\033[33m'
+
+        reset = '\033[0m'
+
+        print(f"{naranja}")
+        print("""
+  _  ____                _                                          
+ (_)/ ___|_ __ __ _  ___(_) __ _ ___   _ __   ___  _ __   ___ _   _ 
+ | | |  _| '__/ _` |/ __| |/ _` / __| | '_ \ / _ \| '__| / __| | | |
+ | | |_| | | | (_| | (__| | (_| \__ \ | |_) | (_) | |    \__ \ |_| |
+ |_|\____|_|  \__,_|\___|_|\__,_|___/ | .__/ \___/|_|    |___/\__,_|
+                                     |_|                           
+   ___ ___  _ __ ___  _ __  _ __ __ _| |                            
+  / __/ _ \| '_ ` _ \| '_ \| '__/ _` | |                            
+ | (_| (_) | | | | | | |_) | | | (_| |_|                            
+  \___\___/|_| |_| |_| .__/|_|  \__,_(_)                            
+                    |_|                                             
+""")
+        print(f"{reset}")
 def menu_rustica():
-    print("\n--Menu de Rustica ---")
+    purpura = '\033[35m'
+    reset = '\033[0m'
+    
+    print(f"{purpura}"
+    """
+██████╗ ██╗   ██╗███████╗████████╗██╗ ██████╗ █████╗ 
+██╔══██╗██║   ██║██╔════╝╚══██╔══╝██║██╔════╝██╔══██╗
+██████╔╝██║   ██║███████╗   ██║   ██║██║     ███████║
+██╔══██╗██║   ██║╚════██║   ██║   ██║██║     ██╔══██║
+██║  ██║╚██████╔╝███████║   ██║   ██║╚██████╗██║  ██║
+╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝
+""")
+    print(f"{reset}")
     print("0. Regresar al menu principal")
     print("1. Alfajor XL - $1000")
     print("2. Cheesecake - $2500")
     print("3. Chocotorta - $3000")
     
+    opcion = input("Elige una opción: ")
+    
+    if opcion == '0':
+        limpiar_pantalla()
+        manejar_menu_principal()
+        
+    elif opcion in ['1', '2', '3']:
+        producto = ["Alfajor XL", "Cheesecake", "Chocotorta"][int(opcion) - 1]
+        limpiar_pantalla()
+        print(f"\nHas seleccionado {producto}.")
+        
+        print("\n¿Cómo te gustaría que fuera tu pedido?")
+        print("1. Para llevar")
+        print("2. Para consumo local")
+        
+        consumo = input("Elige una opción: ")
+        
+        if consumo == '1':
+            print(f"Tu {producto} será para llevar.")
+        elif consumo == '2':
+            print(f"Tu {producto} será para consumo local.")
+        else:
+            print("Opción incorrecta, intente de nuevo.")
+        naranja = '\033[33m'
+
+        reset = '\033[0m'
+
+        print(f"{naranja}")
+        print("""
+  _  ____                _                                          
+ (_)/ ___|_ __ __ _  ___(_) __ _ ___   _ __   ___  _ __   ___ _   _ 
+ | | |  _| '__/ _` |/ __| |/ _` / __| | '_ \ / _ \| '__| / __| | | |
+ | | |_| | | | (_| | (__| | (_| \__ \ | |_) | (_) | |    \__ \ |_| |
+ |_|\____|_|  \__,_|\___|_|\__,_|___/ | .__/ \___/|_|    |___/\__,_|
+                                     |_|                           
+   ___ ___  _ __ ___  _ __  _ __ __ _| |                            
+  / __/ _ \| '_ ` _ \| '_ \| '__/ _` | |                            
+ | (_| (_) | | | | | | |_) | | | (_| |_|                            
+  \___\___/|_| |_| |_| .__/|_|  \__,_(_)                            
+                    |_|                                             
+""")
+        print(f"{reset}")
+    else:
+        print("Opción incorrecta, intente de nuevo.")
+    
 
 def menu_alimentos():
-    print("\n--- Menu de Alimentos ---")
-    print("0. Regresar al menu principal")
-    print("1. Starbucks")
-    print("2. Rustica")
+    amarillo = '\033[93m'
+    reset = '\033[0m'
+    verde = '\033[32m'
+    rosa = '\033[35m'
     
-def menu_ropa_y_accesorios():
+    print(f"{amarillo}"
+    """
+███╗   ███╗███████╗███╗   ██╗██╗   ██╗    ██████╗ ███████╗                
+████╗ ████║██╔════╝████╗  ██║██║   ██║    ██╔══██╗██╔════╝                
+██╔████╔██║█████╗  ██╔██╗ ██║██║   ██║    ██║  ██║█████╗                  
+██║╚██╔╝██║██╔══╝  ██║╚██╗██║██║   ██║    ██║  ██║██╔══╝                  
+██║ ╚═╝ ██║███████╗██║ ╚████║╚██████╔╝    ██████╔╝███████╗                
+╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝     ╚═════╝ ╚══════╝                
+                                                                          
+ █████╗ ██╗     ██╗███╗   ███╗███████╗███╗   ██╗████████╗ ██████╗ ███████╗
+██╔══██╗██║     ██║████╗ ████║██╔════╝████╗  ██║╚══██╔══╝██╔═══██╗██╔════╝
+███████║██║     ██║██╔████╔██║█████╗  ██╔██╗ ██║   ██║   ██║   ██║███████╗
+██╔══██║██║     ██║██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║   ██║   ██║╚════██║
+██║  ██║███████╗██║██║ ╚═╝ ██║███████╗██║ ╚████║   ██║   ╚██████╔╝███████║
+╚═╝  ╚═╝╚══════╝╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚══════╝
+""")
+    print(f"{reset}")  
+
+    print("0. Regresar al menu principal")  
+    print(f"{verde}1. Starbucks{reset}")
+    print(f"{rosa}2. Rustica{reset}")
+    
+'''def menu_ropa_y_accesorios():
     print("\n--- Ropa y Accesorios ---")
     print("1. Bufanda - $10000")
     print("2. Remera - $30000")
@@ -63,11 +194,40 @@ def menu_otros():
     print("2. Mates - $5000")
     print("3. Regresar al menu de productos")
 
+    opcion = input("Elige una opción: ")
+    
+    if opcion == '3':
+        limpiar_pantalla()
+        manejar_menu_principal()
+        
+    elif opcion in ['1', '2']:
+        producto = ["Termos", "Mates"][int(opcion) - 1]
+        limpiar_pantalla()
+        print(f"\nHas seleccionado {producto}.")
+    
+        
+        print("\n¿Cómo te gustaría que fuera tu pedido?")
+        print("1. Para llevar")
+        print("2. Para consumo local")
+        
+        consumo = input("Elige una opción: ")
+        
+        if consumo == '1':
+            print(f"Tu {producto} será para llevar.")
+        elif consumo == '2':
+            print(f"Tu {producto} será para consumo local.")
+        else:
+            print("Opción no válida. Por favor, elige 1 o 2.")
+        
+        print("\nGracias por su compra!")
+    else:
+        print("Opción no válida. Por favor, elige una opción del menú.")
+
 def menu_productos():
     print("\n--- Menu de Productos ---")
     print("1. Ropa y Accesorios")
     print("2. Otros")
-    print("3. Regresar al menu principal")
+    print("3. Regresar al menu principal")'''''
 
 def manejar_menu_principal():
     repetir = True
@@ -75,129 +235,16 @@ def manejar_menu_principal():
         menu_alimentos()
         opcion_alimento = input("Elige una opción: ")
         limpiar_pantalla()
-        # A completar, no olvidar o muerte!
-        repetirAlimento = True
+        
         if opcion_alimento == '0':
             repetir = False
         elif opcion_alimento == '1':
-            ver_productos("Starbucks")
+            menu_starbucks()
         elif opcion_alimento == '2':
-            ver_productos("Rustica")
+            menu_rustica()
         else:
-            print("Opcion incorrecta, intente de nuevo.")
+            print("Opción incorrecta, intente de nuevo.")
             
-        if(opcion_alimento != '0'):
+        if opcion_alimento != '0':
             input()
         limpiar_pantalla()
-
-'''
-def manejar_menu_principal():
-    while True:
-        mostrar_menu_principal()
-        opcion = input("Elige una opción: ")
-
-        if opcion == '1':
-            while True:
-                menu_alimentos()
-                opcion_alimento = input("Elige una opción: ")
-                
-                # A completar, no olvidar o muerte!
-                if opcion_alimento == '1':
-                    while True:
-                        menu_starbucks()
-                        opcion_starbucks = input("Elige una bebida de Starbucks: ")
-                        
-                        if opcion_starbucks == '1':
-                            print("Seleccionaste Latte.")
-                            print("   Café espresso con leche vaporizada.")
-                            print("   Valoración: ☆☆☆☆")
-                        elif opcion_starbucks == '2':
-                            print("Seleccionaste Capuccino.")
-                            print("   Café espresso, leche vaporizada y abundante espuma de leche.")
-                            print("   Valoración: ☆☆☆☆☆")
-                        elif opcion_starbucks == '3':
-                            print("Seleccionaste Flat White.")
-                            print("   Shots de café ristretto con leche vaporizada que finaliza con un punto dibujado en la superficie.")
-                            print("   Valoración: ☆☆☆")
-                        elif opcion_starbucks == '4':
-                            print("Seleccionaste Latte Macchiato.")
-                            print("   Leche vaporizada con shots de café espresso que finaliza con un punto dibujado en la superficie.")
-                            print("   Valoración: ☆☆☆☆")
-                        elif opcion_starbucks == '5':
-                            break  
-                        else:
-                            print("Opcion incorrecta, intente de nuevo.")
-                
-                elif opcion_alimento == '2':
-                    while True:
-                        menu_rustica()
-                        opcion_rustica = input("Elige una opcion de Rustica: ")
-                        
-                        if opcion_rustica == '1':
-                            print("Seleccionaaste Alfajor XL.")
-                        elif opcion_rustica == '2':
-                            print("Seleccionaste Cheesecake.")
-                        elif opcion_rustica == '3':
-                            print("Seleccionaste Chocotorta.")
-                        elif opcion_rustica == '4':
-                            break  
-                        else:
-                            print("Opcion incorrecta, intente de nuev.")
-                
-                elif opcion_alimento == '3':
-                    break  
-                else:
-                    print("Opcion incorrecta, intente de nuevo.")
-        
-        elif opcion == '2':
-            while True:
-                menu_productos()
-                opcion_producto = input("Elige una opcion: ")
-                
-                if opcion_producto == '1':
-                    while True:
-                        menu_ropa_y_accesorios()
-                        opcion_ropa = input("Elige un producto: ")
-                        
-                        if opcion_ropa == '1':
-                            print("Seleccionaste Bufanda.")
-                        elif opcion_ropa == '2':
-                            print("Seleccionaste Remera.")
-                        elif opcion_ropa == '3':
-                            break  
-                        else:
-                            print("Opcion incorrecta, intente de nuevo.")
-                
-                elif opcion_producto == '2':
-                    while True:
-                        menu_otros()
-                        opcion_otros = input("Elige un producto de Otros: ")
-                        
-                        if opcion_otros == '1':
-                            print("Seleccionaste Termos.")
-                        elif opcion_otros == '2':
-                            print("Seleccionaste Mates.")
-                        elif opcion_otros == '3':
-                            break  
-                        else:
-                            print("Opcion incorrecta, intente de nuevo.")
-                
-                elif opcion_producto == '3':
-                    break  
-                else:
-                    print("Opcion incorrecta, intente de nuevo.")
-        
-        elif opcion == '3':
-            print("Adios")
-            break
-        else:
-            print("Opcion incorrecta, intente de nuevo.")
-'''
-
-#Opiniones
-#Encuesta
-#Estetica(?)
-#Ubicacion
-#Cambiar el break
-#Marcar errores
-#Limpiar cada vez que elija una opcion
