@@ -8,7 +8,7 @@ def limpiar_pantalla():
         os.system("clear")
 
 def leer_archivo(nombre):
-    contenido = open(f"base_de_datos/{nombre}", "r")
+    contenido = open(f"base_de_datos/{nombre}", "r", encoding='utf-8')
     lineas = contenido.read()
     contenido.close()
 	
