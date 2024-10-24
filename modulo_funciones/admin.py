@@ -36,7 +36,9 @@ def ver_producto(producto):
             elif op == 1:
                 editar_producto(id)
             elif op == 2:
-                borrar_producto(id)
+                bool = borrar_producto(id)
+                if bool:
+                    repetir = False
             else:
                 print("Opción incorrecta, intente de nuevo.")
                 input()
@@ -55,23 +57,24 @@ def ver_productos():
         print("")
         productos = leer_archivo("productos.json")
         
-        ids = {}
+        contenido = {}
 
         tabla = [["ID", "Nombre", "Descripción", "Precio", "Tipo"]]
 
         for producto in productos:
-            ids[producto["id"]] = True
+            contenido[producto["id"]] = producto
             tabla.append([producto["id"], producto["nombre"], producto["descripcion"], producto["precio"], producto["tipo"]])
 
         imprimir_tabla(tabla)
+    
         print()
 
         try:
             print("0- Volver atras")
             id = int(input("Seleccionar ID del producto: "))
             if(id != 0):
-                if id in ids:
-                    ver_producto(producto)
+                if id in contenido:
+                    ver_producto(contenido[id])
                 else:
                     print("No existe el producto")
                     input()
@@ -145,6 +148,7 @@ def editar_producto(id):
 
 def borrar_producto(id):
     limpiar_pantalla()
+    bool = False
     encontrado = False
     i = 0
     productos = leer_archivo("productos.json")
@@ -158,11 +162,13 @@ def borrar_producto(id):
             if confirmar == "Si" or confirmar == "si":
                 del productos[i]
                 print("Borrado con exito")
+                bool = True
             encontrado = True
         i += 1
     
     escribir_archivo("productos.json", productos)
 
+    return bool
 
 def admin():
     repetir = True
