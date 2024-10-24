@@ -1,26 +1,97 @@
-from modulo_funciones.utiles import limpiar_pantalla, leer_archivo, escribir_archivo
+from modulo_funciones.utiles import limpiar_pantalla, leer_archivo, escribir_archivo, imprimir_tabla
 
-def ver_productos():
-    limpiar_pantalla()
-    print(f"--- Mis Productos ---")
-    print("")
-    productos = leer_archivo("productos.json")
+def validar_producto(name):
+    producto = input(name)
+    while producto == "":
+        print("Ingresear de nuevo")
+        producto = input(name)
+    return producto
 
-    for producto in productos:
-        print(producto["nombre"], "-", "$",producto["precio"])
-        if(producto["descripcion"] != ""):
-            print(producto["descripcion"]) 
-        if(producto["valoracion"] != ""):
-            print("Valoración", producto["valoracion"])
+def ver_producto(producto):
+    repetir = True;
+
+    id = producto["id"]
+
+    while repetir:
+        limpiar_pantalla()
+
+        print("ID:", id)
+        print("Nombre:", producto["nombre"])
+        print("Descripción:", producto["descripcion"])
+        print("Precio:", producto["precio"])
+        print("Tipo:", producto["tipo"])
+
+        print()
+        print("0- Volver")
+        print("1- Editar")
+        print("2- Borrar")
         print()
 
-def crear_productos():
+
+        try:
+            op = int(input("ingrese un valor: "))
+        
+            if op == 0:
+                repetir = False
+            elif op == 1:
+                editar_producto(id)
+            elif op == 2:
+                borrar_producto(id)
+            else:
+                print("Opción incorrecta, intente de nuevo.")
+                input()
+    
+        except:
+            print("Por favor, ingrese un número válido.")
+            input()
+
+
+def ver_productos():
+    mostrar = True;
+
+    while mostrar:
+        limpiar_pantalla()
+        print(f"--- Mis Productos ---")
+        print("")
+        productos = leer_archivo("productos.json")
+        
+        ids = {}
+
+        tabla = [["ID", "Nombre", "Descripción", "Precio", "Tipo"]]
+
+        for producto in productos:
+            ids[producto["id"]] = True
+            tabla.append([producto["id"], producto["nombre"], producto["descripcion"], producto["precio"], producto["tipo"]])
+
+        imprimir_tabla(tabla)
+        print()
+
+        try:
+            print("0- Volver atras")
+            id = int(input("Seleccionar ID del producto: "))
+            if(id != 0):
+                if id in ids:
+                    ver_producto(producto)
+                else:
+                    print("No existe el producto")
+                    input()
+            else: 
+                mostrar = False
+        except:
+            print("Por favor, ingrese un número válido.")
+            input()
+
+
+def crear_producto():
+    limpiar_pantalla()
     print(f"--- Crear Producto ---")
-    nombre = input("Nombre: ")
+    print()
+    
+    nombre = validar_producto("Nombre: ")
     descripcion = input("Descripción: ");
-    tipo = input("Tipo: ")
-    marca = input("Marca: ")
-    precio = input("Precio: ")
+    tipo = validar_producto("Tipo: ")
+    marca = validar_producto("Marca: ")
+    precio = validar_producto("Precio: ")
 
     productos = leer_archivo("productos.json")
     producto = {
@@ -37,11 +108,13 @@ def crear_productos():
 	
     escribir_archivo("productos.json", productos)
 
-def editar_producto():
+def editar_producto(id):
+    limpiar_pantalla()
     print(f"--- Editar Producto ---")
+    print()
+
     encontrado = False
     i = 0
-    id = int(input("ID del producto: "))
     productos = leer_archivo("productos.json")
     
     while not encontrado and len(productos) > i:
@@ -70,18 +143,21 @@ def editar_producto():
 
     escribir_archivo("productos.json", productos)
 
-def borrar_producto():
+def borrar_producto(id):
+    limpiar_pantalla()
     encontrado = False
     i = 0
-    id = int(input("ID del producto: "))
     productos = leer_archivo("productos.json")
 
     while not encontrado and len(productos) > i:
         producto = productos[i]
         
         if(producto["id"] == id):
-            del productos[i]
-            print("Borrado con exito")
+            confirmar = input("¿Estas seguro de borrarlo? (Si/No) ")
+
+            if confirmar == "Si" or confirmar == "si":
+                del productos[i]
+                print("Borrado con exito")
             encontrado = True
         i += 1
     
@@ -95,9 +171,7 @@ def admin():
         print("0- Volver atrás")
         print("1- Ver mis Productos")
         print("2- Crear Producto")
-        print("3- Editar Producto")
-        print("4- Borrar Producto")
-        print("5- Ver mis pedidos")
+        print("3- Ver mis pedidos")
         
         try:
             op = int(input("ingrese un valor: "))
@@ -107,15 +181,11 @@ def admin():
             elif op == 1:
                 ver_productos()
             elif op == 2:
-                crear_productos()
+                crear_producto()
             elif op == 3:
-                editar_producto()
-            elif op == 4:
-                borrar_producto()
-            elif op == 6:
                 pass
-
-            if op != 0:
+            else:
+                print("Opción incorrecta, intente de nuevo.")
                 input()
 
         except:
