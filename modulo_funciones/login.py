@@ -17,11 +17,11 @@ def guardar_usuarios(ruta_archivo, datos):
 
 def registrar_usuarios(ruta_archivo):
     usuarios = cargar_usuario(ruta_archivo)
-    nuevo_usuario = input("Ingrese su nuevo nombre de usuario:")
+    nuevo_usuario = input("Ingrese su nuevo nombre de usuario: ")
     while nuevo_usuario in usuarios["usuarios"]:
         print("El usuario ya existe")
         nuevo_usuario = input("Ingrese su nuevo nombre de usuario: ")
-    nueva_contraseña = input("ingrese su nueva contraseña")
+    nueva_contraseña = input("ingrese su nueva contraseña: ")
     usuarios["usuarios"][nuevo_usuario] = nueva_contraseña
     guardar_usuarios(ruta_archivo,usuarios)
     print("El usuario se ha creado correctamente")
@@ -58,4 +58,4 @@ def login():
             print("Saliendo...")
             A = False
         else:
-            print("Esa opccion no existe, intente de nuevo.")
+            print("Esa opcion no existe, intente de nuevo.")
