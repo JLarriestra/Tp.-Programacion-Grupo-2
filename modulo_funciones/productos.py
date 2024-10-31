@@ -61,15 +61,18 @@ def menu_starbucks():
         print("\n¿Cómo te gustaría que fuera tu pedido?")
         print("1. Para llevar")
         print("2. Para consumo local")
-        
+        print("3. Para reservar")
+
         consumo = input("Elige una opción: ")
-        
+
         if consumo == '1':
             print(f"Tu {producto} será para llevar.")
         elif consumo == '2':
             print(f"Tu {producto} será para consumo local.")
+        elif consumo == '3':
+            print(f"Tu {producto} ha sido reservado.")
         else:
-            print("Opción incorrecta, intente de nuevo.")
+            print("Opción incorrecta, intenta de nuevo.")
         naranja = '\033[33m'
 
         reset = '\033[0m'
@@ -122,6 +125,7 @@ def menu_rustica():
         print("\n¿Cómo te gustaría que fuera tu pedido?")
         print("1. Para llevar")
         print("2. Para consumo local")
+        print("3. Para reservar")
         
         consumo = input("Elige una opción: ")
         
@@ -129,6 +133,8 @@ def menu_rustica():
             print(f"Tu {producto} será para llevar.")
         elif consumo == '2':
             print(f"Tu {producto} será para consumo local.")
+        elif consumo == '3':
+            print(f"Tu {producto} ha sido reservado.")
         else:
             print("Opción incorrecta, intente de nuevo.")
         naranja = '\033[33m'
