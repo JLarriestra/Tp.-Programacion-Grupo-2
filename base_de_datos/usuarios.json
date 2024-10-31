@@ -1,9 +1,20 @@
-{
-    "usuarios": {
-        "admin": "1234",
-        "juanpe": "1234",
-        "hola": "12345",
-        "pepito": "12",
-        "roman": "206"
-    }
-}
+[
+  {
+    "id": 1,
+    "nombre": "vendedor",
+    "contrasena": "1234",
+    "rol": "VENDEDOR"
+  },
+  {
+    "id": 2,
+    "nombre": "usuario",
+    "contrasena": "1234",
+    "rol": "USUARIO"
+  },
+  {
+    "id": 3,
+    "nombre": "nuevo",
+    "contrasena": "nuevo",
+    "rol": "VENDEDOR"
+  }
+]
