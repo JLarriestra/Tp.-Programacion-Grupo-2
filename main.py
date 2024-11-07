@@ -7,7 +7,7 @@ from modulo_funciones.admin import admin
 from modulo_funciones.productos import manejar_menu_principal
 from modulo_funciones.locales import ver_locales
 from modulo_funciones.usuarios import iniciar_sesion, registrarse, cerrar_sesion
-
+from modulo_funciones.reservas import mostrar_reservas
 def ejecutar():
     repetir = True
     while repetir:
