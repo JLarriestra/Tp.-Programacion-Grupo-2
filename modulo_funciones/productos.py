@@ -71,6 +71,7 @@ def menu_starbucks():
             print(f"Tu {producto} será para consumo local.")
         elif consumo == '3':
             print(f"Tu {producto} ha sido reservado.")
+            agregar_reserva(producto)
         else:
             print("Opción incorrecta, intenta de nuevo.")
         naranja = '\033[33m'
@@ -135,6 +136,7 @@ def menu_rustica():
             print(f"Tu {producto} será para consumo local.")
         elif consumo == '3':
             print(f"Tu {producto} ha sido reservado.")
+            agregar_reserva(producto)
         else:
             print("Opción incorrecta, intente de nuevo.")
         naranja = '\033[33m'
