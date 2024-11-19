@@ -2,12 +2,11 @@ import modulo_funciones.GLOBAL as g
 from modulo_funciones.utiles import limpiar_pantalla
 from modulo_funciones.equipo import equipo
 from modulo_funciones.instruc import instrucciones
-# from modulo_funciones.login import login, cerrar_sesion
 from modulo_funciones.admin import admin
 from modulo_funciones.productos import manejar_menu_principal
 from modulo_funciones.locales import ver_locales
 from modulo_funciones.usuarios import iniciar_sesion, registrarse, cerrar_sesion
-from modulo_funciones.reservas import mostrar_reservas
+from modulo_funciones.reservamos import mostrar_reservas
 def ejecutar():
     repetir = True
     while repetir:
