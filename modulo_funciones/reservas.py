@@ -1,12 +1,11 @@
+import pickle
+
 reservas = []
 
 def agregar_reserva(producto):
     reservas.append(producto)
+    guardar_reservas()
 
-def mostrar_reservas():
-    if not reservas:
-        print("No hay reservas actualmente.")
-    else:
-        print("Lista de reservas:")
-        for i, reserva in enumerate(reservas, 1):
-            print(f"{i}. {reserva}")
+def guardar_reservas():
+    with open('reservas.pkl', 'wb') as file:
+        pickle.dump(reservas, file)
