@@ -190,33 +190,44 @@ def menu_alimentos():
     print(f"{verde}1. Starbucks{reset}")
     print(f"{rosa}2. Rustica{reset}")
     
-'''def menu_ropa_y_accesorios():
-    print("\n--- Ropa y Accesorios ---")
-    print("1. Bufanda - $10000")
-    print("2. Remera - $30000")
-    print("3. Regresar al menu de productos")
 
-def menu_otros():
-    print("\n--- Otros ---")
-    print("1. Termos - $15000")
-    print("2. Mates - $5000")
-    print("3. Regresar al menu de productos")
+def menu_nescafé():
+    rojo = "\033[91m"
+    reset = '\033[0m'
+
+    print(f"{rojo}"""" 
+███╗   ██╗███████╗███████╗ ██████╗ █████╗ ███████╗███████╗
+████╗  ██║██╔════╝██╔════╝██╔════╝██╔══██╗██╔════╝██╔════╝
+██╔██╗ ██║█████╗  ███████╗██║     ███████║█████╗  █████╗  
+██║╚██╗██║██╔══╝  ╚════██║██║     ██╔══██║██╔══╝  ██╔══╝  
+██║ ╚████║███████╗███████║╚██████╗██║  ██║██║     ███████╗
+╚═╝  ╚═══╝╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝     ╚══════╝""")
+    print(f"{reset}")
+
+    
+    print("0. Regresar al menu principal")
+    print("1. Café con chocolate - $1000")
+    print("2. Chocolate fuerte - $2500")
+    print("3. té de limon - $3000")
+    print("4. Capuccino - $4000 ")
+    print("5. Latte vainilla - $3500")
+
 
     opcion = input("Elige una opción: ")
     
-    if opcion == '3':
+    if opcion == '0':
         limpiar_pantalla()
         manejar_menu_principal()
         
-    elif opcion in ['1', '2']:
-        producto = ["Termos", "Mates"][int(opcion) - 1]
+    elif opcion in ['1', '2', '3','4','5']:
+        producto = ["Café con chocolate", "Chocolate fuerte", "té de limon","Capuccino","Latte vainilla"][int(opcion) - 1]
         limpiar_pantalla()
         print(f"\nHas seleccionado {producto}.")
-    
         
         print("\n¿Cómo te gustaría que fuera tu pedido?")
         print("1. Para llevar")
         print("2. Para consumo local")
+        print("3. Para reservar")   
         
         consumo = input("Elige una opción: ")
         
@@ -224,18 +235,31 @@ def menu_otros():
             print(f"Tu {producto} será para llevar.")
         elif consumo == '2':
             print(f"Tu {producto} será para consumo local.")
-        else:
-            print("Opción no válida. Por favor, elige 1 o 2.")
-        
-        print("\nGracias por su compra!")
+        elif consumo == '3':
+            print(f"Tu {producto} ha sido reservado.")
+            agregar_reserva(producto)
+            
+            
+        print(f"{rojo}")
+        print("""
+  _  ____                _                                          
+ (_)/ ___|_ __ __ _  ___(_) __ _ ___   _ __   ___  _ __   ___ _   _ 
+ | | |  _| '__/ _` |/ __| |/ _` / __| | '_ \ / _ \| '__| / __| | | |
+ | | |_| | | | (_| | (__| | (_| \__ \ | |_) | (_) | |    \__ \ |_| |
+ |_|\____|_|  \__,_|\___|_|\__,_|___/ | .__/ \___/|_|    |___/\__,_|
+                                     |_|                           
+   ___ ___  _ __ ___  _ __  _ __ __ _| |                            
+  / __/ _ \| '_ ` _ \| '_ \| '__/ _` | |                            
+ | (_| (_) | | | | | | |_) | | | (_| |_|                            
+  \___\___/|_| |_| |_| .__/|_|  \__,_(_)                            
+                    |_|                                             
+""")
+        print(f"{reset}")
     else:
-        print("Opción no válida. Por favor, elige una opción del menú.")
+         print("Opción incorrecta, intente de nuevo.")
 
-def menu_productos():
-    print("\n--- Menu de Productos ---")
-    print("1. Ropa y Accesorios")
-    print("2. Otros")
-    print("3. Regresar al menu principal")'''''
+
+
 
 def manejar_menu_principal():
     repetir = True
