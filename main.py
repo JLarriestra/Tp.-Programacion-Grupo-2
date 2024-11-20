@@ -6,12 +6,13 @@ from modulo_funciones.admin import admin
 from modulo_funciones.productos import manejar_menu_principal
 from modulo_funciones.locales import ver_locales
 from modulo_funciones.usuarios import iniciar_sesion, registrarse, cerrar_sesion
-from modulo_funciones.reservamos import mostrar_reservas
+from modulo_funciones.reservas import mostrar_reservas
 from modulo_funciones.ofertas import menu_of
 def ejecutar():
     repetir = True
     while repetir:
         limpiar_pantalla()
+        
         print("0- Volver al inicio")
         print("1- Ver productos")
         print("2- Ver descuentos")
@@ -43,7 +44,7 @@ def ejecutar():
                     if(g.usuario["rol"] == "VENDEDOR"):
                         admin()
                     else:
-                        pass
+                        mostrar_reservas(g.usuario["id"])
                 else:
                     iniciar_sesion()
             elif op == 6:
@@ -58,10 +59,26 @@ def menu():
     repetir = True
     while repetir:
         limpiar_pantalla()
-        print("1- equipo")
-        print("2- instrucciones")
-        print("3- ejecutar")
-        print("4- salir")
+        azul = "\033[34m"
+        reset = '\033[0m'
+
+        print(f"{azul}"""" 
+          ██╗   ██╗ █████╗ ██████╗ ███████╗    ███████╗██╗  ██╗ ██████╗ ██████╗ 
+          ██║   ██║██╔══██╗██╔══██╗██╔════╝    ██╔════╝██║  ██║██╔═══██╗██╔══██╗
+          ██║   ██║███████║██║  ██║█████╗      ███████╗███████║██║   ██║██████╔╝
+          ██║   ██║██╔══██║██║  ██║██╔══╝      ╚════██║██╔══██║██║   ██║██╔═══╝ 
+          ╚██████╔╝██║  ██║██████╔╝███████╗    ███████║██║  ██║╚██████╔╝██║     
+           ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝    ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     """)
+    
+        print(f"{reset}")
+        print("+------------------------------------+")
+        print("|              __MENU__              |")
+        print("|                                    |")
+        print("|  1- equipo                         |")
+        print("|  2- instrucciones                  |")
+        print("|  3- ejecutar                       |")
+        print("|  4- salir                          |")
+        print("+------------------------------------+")
         try:
             op = int(input("ingrese un valor: "))
             limpiar_pantalla()

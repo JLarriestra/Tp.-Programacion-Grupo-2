@@ -1,26 +1,26 @@
 [
-    {
-        "id": 1,
-        "nombre": "Tienda Principal",
-        "direccion": "Calle Falsa",
-        "vendedor_id": 1
-    },
-    {
-        "id": 2,
-        "nombre": "Tienda Secundario",
-        "direccion": "Calle 123",
-        "vendedor_id": 1
-    },
-    {
-        "id": 3,
-        "nombre": "Tienda Starbucks",
-        "direccion": "Lima 1",
-        "vendedor_id": 1
-    },
-    {
-        "id": 4,
-        "nombre": "Tienda Rustica",
-        "direccion": "Independencia 1",
-        "vendedor_id": 3
-    }
+  {
+    "id": 1,
+    "nombre": "Tienda Principal",
+    "direccion": "Calle Falsa",
+    "vendedor_id": 2
+  },
+  {
+    "id": 2,
+    "nombre": "Tienda Secundario",
+    "direccion": "Calle 123",
+    "vendedor_id": 2
+  },
+  {
+    "id": 3,
+    "nombre": "Tienda Starbucks",
+    "direccion": "Lima 1",
+    "vendedor_id": 2
+  },
+  {
+    "id": 4,
+    "nombre": "Tienda Rustica",
+    "direccion": "Independencia 1",
+    "vendedor_id": 3
+  }
 ]
