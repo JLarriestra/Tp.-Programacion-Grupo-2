@@ -313,4 +313,100 @@ def menu_rustica():
     
 
 
+    print("0. Regresar al menu principal")  
+    print(f"{verde}1. Starbucks{reset}")
+    print(f"{rosa}2. Rustica{reset}")
+    
+
+def menu_nescafé():
+    rojo = "\033[91m"
+    reset = '\033[0m'
+
+    print(f"{rojo}"""" 
+███╗   ██╗███████╗███████╗ ██████╗ █████╗ ███████╗███████╗
+████╗  ██║██╔════╝██╔════╝██╔════╝██╔══██╗██╔════╝██╔════╝
+██╔██╗ ██║█████╗  ███████╗██║     ███████║█████╗  █████╗  
+██║╚██╗██║██╔══╝  ╚════██║██║     ██╔══██║██╔══╝  ██╔══╝  
+██║ ╚████║███████╗███████║╚██████╗██║  ██║██║     ███████╗
+╚═╝  ╚═══╝╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝     ╚══════╝""")
+    print(f"{reset}")
+
+    
+    print("0. Regresar al menu principal")
+    print("1. Café con chocolate - $1000")
+    print("2. Chocolate fuerte - $2500")
+    print("3. té de limon - $3000")
+    print("4. Capuccino - $4000 ")
+    print("5. Latte vainilla - $3500")
+
+
+    opcion = input("Elige una opción: ")
+    
+    if opcion == '0':
+        limpiar_pantalla()
+        manejar_menu_principal()
+        
+    elif opcion in ['1', '2', '3','4','5']:
+        producto = ["Café con chocolate", "Chocolate fuerte", "té de limon","Capuccino","Latte vainilla"][int(opcion) - 1]
+        limpiar_pantalla()
+        print(f"\nHas seleccionado {producto}.")
+        
+        print("\n¿Cómo te gustaría que fuera tu pedido?")
+        print("1. Para llevar")
+        print("2. Para consumo local")
+        print("3. Para reservar")   
+        
+        consumo = input("Elige una opción: ")
+        
+        if consumo == '1':
+            print(f"Tu {producto} será para llevar.")
+        elif consumo == '2':
+            print(f"Tu {producto} será para consumo local.")
+        elif consumo == '3':
+            print(f"Tu {producto} ha sido reservado.")
+            agregar_reserva(producto)
+            
+            
+        print(f"{rojo}")
+        print("""
+  _  ____                _                                          
+ (_)/ ___|_ __ __ _  ___(_) __ _ ___   _ __   ___  _ __   ___ _   _ 
+ | | |  _| '__/ _` |/ __| |/ _` / __| | '_ \ / _ \| '__| / __| | | |
+ | | |_| | | | (_| | (__| | (_| \__ \ | |_) | (_) | |    \__ \ |_| |
+ |_|\____|_|  \__,_|\___|_|\__,_|___/ | .__/ \___/|_|    |___/\__,_|
+                                     |_|                           
+   ___ ___  _ __ ___  _ __  _ __ __ _| |                            
+  / __/ _ \| '_ ` _ \| '_ \| '__/ _` | |                            
+ | (_| (_) | | | | | | |_) | | | (_| |_|                            
+  \___\___/|_| |_| |_| .__/|_|  \__,_(_)                            
+                    |_|                                             
+""")
+        print(f"{reset}")
+    else:
+         print("Opción incorrecta, intente de nuevo.")
+
+
+
+
+def manejar_menu_principal():
+    repetir = True
+    while repetir:
+        menu_alimentos()
+        opcion_alimento = input("Elige una opción: ")
+        limpiar_pantalla()
+        
+        if opcion_alimento == '0':
+            repetir = False
+        elif opcion_alimento == '1':
+            menu_starbucks()
+        elif opcion_alimento == '2':
+            menu_rustica()
+        elif opcion_alimento == '3':
+            menu_nescafé()
+        else:
+            print("Opción incorrecta, intente de nuevo.")
+            
+        if opcion_alimento != '0':
+            input()
+        limpiar_pantalla()
 '''
