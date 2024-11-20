@@ -7,6 +7,7 @@ from modulo_funciones.productos import manejar_menu_principal
 from modulo_funciones.locales import ver_locales
 from modulo_funciones.usuarios import iniciar_sesion, registrarse, cerrar_sesion
 from modulo_funciones.reservamos import mostrar_reservas
+from modulo_funciones.ofertas import menu_of
 def ejecutar():
     repetir = True
     while repetir:
@@ -33,6 +34,8 @@ def ejecutar():
                 repetir = False
             elif op == 1:
                 manejar_menu_principal()
+            elif op == 2:
+                menu_of()
             elif op == 3:
                 ver_locales()
             elif op == 5:
