@@ -180,6 +180,45 @@ def borrar_producto(id):
 
     return bool
 
+def ver_mis_reservas():
+    if g.usuario and g.usuario["rol"] == "VENDEDOR":
+        mostrar = True
+    
+        while mostrar:
+            limpiar_pantalla()
+            print(f"--- Mis Reservaciones ---")
+            print("")
+            reservas = leer_archivo("reservas.json")
+            usuarios = leer_archivo("usuarios.json")
+            usuarios_obj = {}
+
+            for usuario in usuarios:
+                usuarios_obj[usuario["id"]] = usuario["nombre"]
+            
+            n = 1
+
+            tabla = [["ID", "Usuario", "Nombre", "Precio"]]
+
+            for reserva in reservas:
+                if reserva["vendedor_id"] == g.usuario["id"]:
+                    tabla.append([n, usuarios_obj[reserva["usuario_id"]], reserva["producto"]["nombre"], reserva["producto"]["precio"]])
+                    n += 1
+
+            imprimir_tabla(tabla)
+        
+            print()
+           
+            try:
+                print("0- Volver atras")
+                id = int(input("Seleccionar opción: "))
+                if(id != 0):
+                   pass
+                else: 
+                    mostrar = False
+            except:
+                print("Por favor, ingrese un número válido.")
+                input()
+
 def admin():
     repetir = True
     while repetir:
@@ -187,8 +226,9 @@ def admin():
         print("0- Volver atrás")
         print("1- Ver mis Productos")
         print("2- Crear Producto")
-        print("3- Ver mis locales")
+        print("3- Ver mis Locales")
         print("4- Crear Local")
+        print("5- Ver mis Reservas")
         
         try:
             op = int(input("ingrese un valor: "))
@@ -203,6 +243,8 @@ def admin():
                 ver_mis_locales()
             elif op == 4:
                 crear_local()
+            elif op == 5:
+                ver_mis_reservas()
             else:
                 print("Opción incorrecta, intente de nuevo.")
                 input()

@@ -1,82 +1,82 @@
 [
-    {
-        "id": 1,
-        "nombre": "Latte",
-        "descripcion": "Café espresso con leche vaporizada.",
-        "tipo": "Cafe",
-        "marca": "Starbucks",
-        "precio": "1500",
-        "valoracion": "☆☆☆☆",
-        "vendedor_id": 1
-    },
-    {
-        "id": 2,
-        "nombre": "Capuccino",
-        "descripcion": "Café espresso con leche vaporizada.",
-        "tipo": "Cafe",
-        "marca": "Starbucks",
-        "precio": "1900",
-        "valoracion": "☆☆☆☆☆",
-        "vendedor_id": 1
-    },
-    {
-        "id": 3,
-        "nombre": "Flat White",
-        "descripcion": "Shots de café ristretto con leche vaporizada que finaliza con un punto dibujado en la superficie.",
-        "tipo": "Cafe",
-        "marca": "Starbucks",
-        "precio": "2000",
-        "valoracion": "☆☆☆",
-        "vendedor_id": 1
-    },
-    {
-        "id": 4,
-        "nombre": "Latte Macchiato",
-        "descripcion": "Leche vaporizada con shots de café espresso que finaliza con un punto dibujado en la superficie.",
-        "tipo": "Cafe",
-        "marca": "Starbucks",
-        "precio": "2000",
-        "valoracion": "☆☆☆☆",
-        "vendedor_id": 1
-    },
-    {
-        "id": 5,
-        "nombre": "Latte Macchiato",
-        "descripcion": "Leche vaporizada con shots de café espresso que finaliza con un punto dibujado en la superficie. ",
-        "tipo": "Cafe",
-        "marca": "Starbucks",
-        "precio": "2000",
-        "valoracion": "☆☆☆☆",
-        "vendedor_id": 1
-    },
-    {
-        "id": 6,
-        "nombre": "Alfajor XL",
-        "descripcion": "",
-        "tipo": "Dulces",
-        "marca": "Rustica",
-        "precio": "1000",
-        "valoracion": "",
-        "vendedor_id": 3
-    },
-    {
-        "id": 7,
-        "nombre": "Cheesecake XL",
-        "descripcion": "",
-        "tipo": "Dulces",
-        "marca": "Rustica",
-        "precio": "2500",
-        "valoracion": "",
-        "vendedor_id": 3
-    },
-    {
-        "id": 8,
-        "nombre": "Chocotorta",
-        "descripcion": "",
-        "tipo": "Dulces",
-        "marca": "Rustica",
-        "precio": "3000",
-        "valoracion": "",
-        "vendedor_id": 3
-    }
+  {
+    "id": 1,
+    "nombre": "Latte",
+    "descripcion": "Café espresso con leche vaporizada.",
+    "tipo": "Cafe",
+    "marca": "Starbucks",
+    "precio": "1500",
+    "valoracion": "☆☆☆☆",
+    "vendedor_id": 2
+  },
+  {
+    "id": 2,
+    "nombre": "Capuccino",
+    "descripcion": "Café espresso con leche vaporizada.",
+    "tipo": "Cafe",
+    "marca": "Starbucks",
+    "precio": "1900",
+    "valoracion": "☆☆☆☆☆",
+    "vendedor_id": 2
+  },
+  {
+    "id": 3,
+    "nombre": "Flat White",
+    "descripcion": "Shots de café ristretto con leche vaporizada que finaliza con un punto dibujado en la superficie.",
+    "tipo": "Cafe",
+    "marca": "Starbucks",
+    "precio": "2000",
+    "valoracion": "☆☆☆",
+    "vendedor_id": 2
+  },
+  {
+    "id": 4,
+    "nombre": "Latte Macchiato",
+    "descripcion": "Leche vaporizada con shots de café espresso que finaliza con un punto dibujado en la superficie.",
+    "tipo": "Cafe",
+    "marca": "Starbucks",
+    "precio": "2000",
+    "valoracion": "☆☆☆☆",
+    "vendedor_id": 2
+  },
+  {
+    "id": 5,
+    "nombre": "Latte Macchiato",
+    "descripcion": "Leche vaporizada con shots de café espresso que finaliza con un punto dibujado en la superficie. ",
+    "tipo": "Cafe",
+    "marca": "Starbucks",
+    "precio": "2000",
+    "valoracion": "☆☆☆☆",
+    "vendedor_id": 2
+  },
+  {
+    "id": 6,
+    "nombre": "Alfajor XL",
+    "descripcion": "",
+    "tipo": "Dulces",
+    "marca": "Rustica",
+    "precio": "1000",
+    "valoracion": "",
+    "vendedor_id": 3
+  },
+  {
+    "id": 7,
+    "nombre": "Cheesecake XL",
+    "descripcion": "",
+    "tipo": "Dulces",
+    "marca": "Rustica",
+    "precio": "2500",
+    "valoracion": "",
+    "vendedor_id": 3
+  },
+  {
+    "id": 8,
+    "nombre": "Chocotorta",
+    "descripcion": "",
+    "tipo": "Dulces",
+    "marca": "Rustica",
+    "precio": "3000",
+    "valoracion": "",
+    "vendedor_id": 3
+  }
 ]

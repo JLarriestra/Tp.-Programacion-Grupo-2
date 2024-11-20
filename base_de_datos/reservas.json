@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "usuario_id": 1,
+        "vendedor_id": 2,
+        "producto": {
+            "id": 3,
+            "nombre": "Flat White",
+            "precio": "2000"
+        }
+    },
+    {
+        "id": 2,
+        "usuario_id": 5,
+        "vendedor_id": 2,
+        "producto": {
+            "id": 4,
+            "nombre": "Latte Macchiato",
+            "precio": "2000"
+        }
+    },
+    {
+        "id": 3,
+        "usuario_id": 5,
+        "vendedor_id": 2,
+        "producto": {
+            "id": 2,
+            "nombre": "Capuccino",
+            "precio": "1900"
+        }
+    }
+]

@@ -1,20 +1,32 @@
 [
-  {
-    "id": 1,
-    "nombre": "vendedor",
-    "contrasena": "1234",
-    "rol": "VENDEDOR"
-  },
-  {
-    "id": 2,
-    "nombre": "usuario",
-    "contrasena": "1234",
-    "rol": "USUARIO"
-  },
-  {
-    "id": 3,
-    "nombre": "nuevo",
-    "contrasena": "nuevo",
-    "rol": "VENDEDOR"
-  }
+    {
+        "id": 1,
+        "nombre": "usuario",
+        "contrasena": "1234",
+        "rol": "USUARIO"
+    },
+    {
+        "id": 2,
+        "nombre": "Starbucks",
+        "contrasena": "1234",
+        "rol": "VENDEDOR"
+    },
+    {
+        "id": 3,
+        "nombre": "Rustica",
+        "contrasena": "1234",
+        "rol": "VENDEDOR"
+    },
+    {
+        "id": 4,
+        "nombre": "Nescafe",
+        "contrasena": "1234",
+        "rol": "VENDEDOR"
+    },
+    {
+        "id": 5,
+        "nombre": "ariel",
+        "contrasena": "1234",
+        "rol": "USUARIO"
+    }
 ]

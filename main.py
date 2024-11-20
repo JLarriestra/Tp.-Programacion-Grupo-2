@@ -8,6 +8,7 @@ from modulo_funciones.productos import manejar_menu_principal
 from modulo_funciones.locales import ver_locales
 from modulo_funciones.usuarios import iniciar_sesion, registrarse, cerrar_sesion
 from modulo_funciones.reservas import mostrar_reservas
+
 def ejecutar():
     repetir = True
     while repetir:
@@ -41,7 +42,7 @@ def ejecutar():
                     if(g.usuario["rol"] == "VENDEDOR"):
                         admin()
                     else:
-                        pass
+                        mostrar_reservas(g.usuario["id"])
                 else:
                     iniciar_sesion()
             elif op == 6:
