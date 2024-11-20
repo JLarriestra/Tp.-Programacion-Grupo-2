@@ -274,6 +274,8 @@ def manejar_menu_principal():
             menu_starbucks()
         elif opcion_alimento == '2':
             menu_rustica()
+        elif opcion_alimento == '3':
+            menu_nescafé()
         else:
             print("Opción incorrecta, intente de nuevo.")
             
