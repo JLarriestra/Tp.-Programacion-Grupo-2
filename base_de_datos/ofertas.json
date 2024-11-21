@@ -63,7 +63,7 @@
                 "cantidad": 1
             }
         ],
-        "descuento": 10,
+        "descuento": 15,
         "promo": []
     },
     {
@@ -176,7 +176,7 @@
         "descuento": 0,
         "promo": [
             2,
-            3
+            1
         ]
     },
     {

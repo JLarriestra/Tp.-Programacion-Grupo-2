@@ -6,7 +6,7 @@
     "tipo": "Cafe",
     "marca": "Starbucks",
     "precio": "1500",
-    "valoracion": "☆☆☆☆",
+    "valoracion": "",
     "vendedor_id": 2
   },
   {
@@ -16,7 +16,7 @@
     "tipo": "Cafe",
     "marca": "Starbucks",
     "precio": "1900",
-    "valoracion": "☆☆☆☆☆",
+    "valoracion": "",
     "vendedor_id": 2
   },
   {
@@ -26,7 +26,7 @@
     "tipo": "Cafe",
     "marca": "Starbucks",
     "precio": "2000",
-    "valoracion": "☆☆☆",
+    "valoracion": "",
     "vendedor_id": 2
   },
   {
@@ -36,7 +36,7 @@
     "tipo": "Cafe",
     "marca": "Starbucks",
     "precio": "2000",
-    "valoracion": "☆☆☆☆",
+    "valoracion": "",
     "vendedor_id": 2
   },
   {
@@ -46,7 +46,7 @@
     "tipo": "Cafe",
     "marca": "Starbucks",
     "precio": "2000",
-    "valoracion": "☆☆☆☆",
+    "valoracion": "",
     "vendedor_id": 2
   },
   {

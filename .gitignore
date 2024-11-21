@@ -1,13 +1,13 @@
-# Byte-compiled Python files
+
 *.py[cod]
 
-# Python 3.8+ cache files
+
 **/__pycache__/
 
-# Log files
+
 *.log
 
-# Virtual environment directories
+
 .venv/
 env/
 venv/

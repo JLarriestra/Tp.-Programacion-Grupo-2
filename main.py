@@ -72,7 +72,7 @@ def menu():
     
         print(f"{reset}")
         print("+------------------------------------+")
-        print("|              __MENU__              |")
+        print("|                MENU                |")
         print("|                                    |")
         print("|  1- equipo                         |")
         print("|  2- instrucciones                  |")

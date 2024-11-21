@@ -28,5 +28,11 @@
         "nombre": "ariel",
         "contrasena": "1234",
         "rol": "USUARIO"
+    },
+    {
+        "id": 6,
+        "nombre": "juanpe",
+        "contrasena": "1234",
+        "rol": "USUARIO"
     }
 ]
