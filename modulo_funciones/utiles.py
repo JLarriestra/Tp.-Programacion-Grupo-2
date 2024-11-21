@@ -1,5 +1,6 @@
 import os
 import json
+import modulo_funciones.GLOBAL as g
 
 def limpiar_pantalla():
     if os.name == "nt": 
@@ -45,3 +46,18 @@ def imprimir_tabla(datos):
             contenido.append(f' {str(fila[i]) + espacio} ')
         print('|' + '|'.join(contenido) + '|')
         print('+' + linea_separadora + '+')
+
+def convertir_a_ascii_art(texto):
+    texto = texto.upper()
+    filas = [""] * 6  
+    
+    for letra in texto:
+        if letra in g.abcedario:
+            arte_ascii = g.abcedario[letra].split("\n")
+            for i in range(6):
+                filas[i] += arte_ascii[i + 1]
+        else:
+            for i in range(6):
+                filas[i] += " " * 10
+    
+    return "\n".join(filas)

@@ -28,5 +28,15 @@
             "nombre": "Capuccino",
             "precio": "1900"
         }
+    },
+    {
+        "id": 4,
+        "usuario_id": 1,
+        "vendedor_id": 2,
+        "producto": {
+            "id": 12,
+            "nombre": "5x2 Capuccino",
+            "precio": 3800
+        }
     }
 ]

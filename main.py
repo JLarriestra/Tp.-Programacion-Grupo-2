@@ -15,7 +15,7 @@ def ejecutar():
         
         print("0- Volver al inicio")
         print("1- Ver productos")
-        print("2- Ver descuentos")
+        print("2- Ver ofertas")
         print("3- ver locales")
         print("4- Buscar")
         if(g.usuario):

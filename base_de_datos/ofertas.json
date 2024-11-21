@@ -1,0 +1,198 @@
+[
+    {
+        "id": 1,
+        "vendedor_id": 3,
+        "productos": [
+            {
+                "id": 6,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 10,
+        "promo": [
+            2,
+            1
+        ]
+    },
+    {
+        "id": 2,
+        "vendedor_id": 3,
+        "productos": [
+            {
+                "id": 7,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 20,
+        "promo": []
+    },
+    {
+        "id": 3,
+        "vendedor_id": 3,
+        "productos": [
+            {
+                "id": 7,
+                "cantidad": 1
+            },
+            {
+                "id": 8,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 0,
+        "promo": []
+    },
+    {
+        "id": 4,
+        "vendedor_id": 2,
+        "productos": [
+            {
+                "id": 2,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 30,
+        "promo": []
+    },
+    {
+        "id": 6,
+        "vendedor_id": 2,
+        "productos": [
+            {
+                "id": 3,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 10,
+        "promo": []
+    },
+    {
+        "id": 7,
+        "vendedor_id": 4,
+        "productos": [
+            {
+                "id": 9,
+                "cantidad": 1
+            },
+            {
+                "id": 10,
+                "cantidad": 2
+            }
+        ],
+        "descuento": 0,
+        "promo": []
+    },
+    {
+        "id": 8,
+        "vendedor_id": 4,
+        "productos": [
+            {
+                "id": 11,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 50,
+        "promo": []
+    },
+    {
+        "id": 9,
+        "vendedor_id": 4,
+        "productos": [
+            {
+                "id": 12,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 0,
+        "promo": [
+            3,
+            2
+        ]
+    },
+    {
+        "id": 11,
+        "vendedor_id": 2,
+        "productos": [
+            {
+                "id": 4,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 50,
+        "promo": []
+    },
+    {
+        "id": 12,
+        "vendedor_id": 2,
+        "productos": [
+            {
+                "id": 2,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 0,
+        "promo": [
+            5,
+            2
+        ]
+    },
+    {
+        "id": 12,
+        "vendedor_id": 2,
+        "productos": [
+            {
+                "id": 2,
+                "cantidad": 1
+            },
+            {
+                "id": 3,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 10,
+        "promo": []
+    },
+    {
+        "id": 13,
+        "vendedor_id": 2,
+        "productos": [
+            {
+                "id": 2,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 10,
+        "promo": []
+    },
+    {
+        "id": 14,
+        "vendedor_id": 2,
+        "productos": [
+            {
+                "id": 1,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 0,
+        "promo": [
+            2,
+            3
+        ]
+    },
+    {
+        "id": 15,
+        "vendedor_id": 2,
+        "productos": [
+            {
+                "id": 3,
+                "cantidad": 2
+            },
+            {
+                "id": 1,
+                "cantidad": 2
+            }
+        ],
+        "descuento": 20,
+        "promo": []
+    }
+]

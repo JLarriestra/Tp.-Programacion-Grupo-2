@@ -71,12 +71,52 @@
   },
   {
     "id": 8,
-    "nombre": "Chocotorta",
+    "nombre": "Café con chocolate",
     "descripcion": "",
-    "tipo": "Dulces",
-    "marca": "Rustica",
+    "tipo": "Cafe",
+    "marca": "Nescafe",
     "precio": "3000",
     "valoracion": "",
-    "vendedor_id": 3
+    "vendedor_id": 4
+  },
+  {
+    "id": 9,
+    "nombre": "Chocolate fuerte",
+    "descripcion": "",
+    "tipo": "Cafe",
+    "marca": "Nescafe",
+    "precio": "3000",
+    "valoracion": "",
+    "vendedor_id": 4
+  },
+  {
+    "id": 10,
+    "nombre": "Té de limon",
+    "descripcion": "",
+    "tipo": "Té",
+    "marca": "Nescafe",
+    "precio": "3000",
+    "valoracion": "",
+    "vendedor_id": 4
+  },
+  {
+    "id": 11,
+    "nombre": "Capuccino",
+    "descripcion": "",
+    "tipo": "Cafe",
+    "marca": "Nescafe",
+    "precio": "3000",
+    "valoracion": "",
+    "vendedor_id": 4
+  },
+  {
+    "id": 12,
+    "nombre": "Latte vainilla",
+    "descripcion": "",
+    "tipo": "Cafe",
+    "marca": "Nescafe",
+    "precio": "3000",
+    "valoracion": "",
+    "vendedor_id": 4
   }
 ]
