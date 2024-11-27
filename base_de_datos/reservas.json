@@ -48,5 +48,15 @@
             "nombre": "Latte",
             "precio": "1500"
         }
+    },
+    {
+        "id": 6,
+        "usuario_id": 7,
+        "vendedor_id": 2,
+        "producto": {
+            "id": 1,
+            "nombre": "Latte",
+            "precio": "1500"
+        }
     }
 ]

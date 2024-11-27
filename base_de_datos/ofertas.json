@@ -185,14 +185,26 @@
         "productos": [
             {
                 "id": 3,
-                "cantidad": 2
+                "cantidad": 3
             },
             {
                 "id": 1,
-                "cantidad": 2
+                "cantidad": 3
             }
         ],
-        "descuento": 20,
+        "descuento": 60,
+        "promo": []
+    },
+    {
+        "id": 15,
+        "vendedor_id": 2,
+        "productos": [
+            {
+                "id": 1,
+                "cantidad": 1
+            }
+        ],
+        "descuento": 50,
         "promo": []
     }
 ]
